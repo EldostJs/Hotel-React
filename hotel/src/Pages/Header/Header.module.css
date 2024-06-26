@@ -1,0 +1,81 @@
+
+.bd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    font-family: Hack, monospace;
+    margin-top: -12%;
+}
+
+.pp {
+    margin: 16px;
+    font-size: 96px;
+    color: #ccc;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+    position: relative;
+}
+
+.pp::before {
+    content: attr(data-item);
+    transition: all 1s ease-in-out;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.pp:hover::before {
+    width: 100%;
+}
+
+nav {
+    margin: 25px;
+    background: #f9f9f9;
+    padding: 16px;
+}
+
+.menuItems {
+    list-style: none;
+    display: flex;
+}
+
+.list {
+    margin: 50px;
+}
+
+.ab {
+    text-decoration: none;
+    color: #8f8f8f;
+    font-size: 24px;
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.ab::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+}
+
+.ab:hover::before {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
